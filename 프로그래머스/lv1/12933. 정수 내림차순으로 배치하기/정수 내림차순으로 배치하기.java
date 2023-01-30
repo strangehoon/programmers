@@ -6,9 +6,8 @@ class Solution {
         String [] arrString = String.valueOf(n).split("");
         Arrays.sort(arrString, Comparator.reverseOrder());
 
-        String result = String.join("", arrString);
+        long [] arrLong = Arrays.stream(arrString).mapToLong(Long::parseLong).toArray();
 
-        return Long.parseLong(result);
-        
+        return arrLong;
     }
 }
