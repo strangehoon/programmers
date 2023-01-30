@@ -20,7 +20,7 @@ class Solution {
         
         // 리스트에 있는 값들을 배열에 담기
         for (int i = 0 ; i < list.size() ; i++) {
-            results[i] = list.get(i).intValue();
+            results[i] = list.get(i);
         }
         
         // 오름차순 정렬
