@@ -1,18 +1,20 @@
 import java.util.*;
 
+/////////////////// better solution(스트림 활용)
+
 class Solution {
     public int[] solution(int[] arr, int divisor) {
         
-        int[] intArray = Arrays.stream(arr).filter(i->i%divisor==0).sorted().toArray();
-        if (intArray.length == 0)
-            intArray = new int[]{-1};
+        int[] intArr = Arrays.stream(arr).filter(i->i%divisor==0).sorted().toArray();
+        if (intArr.length == 0)
+            intArr = new int[]{-1};
 
-        return intArray;
-            
+        return intArr;           
     }
 }
 
-//orginal sol
+/////////////////// orginal solution
+
 // class Solution2 {
 //     public int[] solution(int[] arr, int divisor) {
 //         // 리스트 생성
