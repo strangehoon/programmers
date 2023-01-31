@@ -5,19 +5,14 @@ class Solution {
         result[1] = lcd(n,m);
         return result;
     }
+    //최대공약수(유클리드 호제법)
     public static int gcd(int n, int m){
-        if(n<m){
-            int temp = n;
-            n = m;
-            m = temp;
+        if (m == 0){
+            return n;
         }
-        while(m != 0){
-            int r = n % m;
-            n = m;
-            m = r;
-        }
-        return n;
+        return gcd(m, n % m);
     }
+    //최소공배수
     public static int lcd(int n, int m){
         return n * m / gcd(n, m);
     }
