@@ -6,8 +6,9 @@ class Solution {
         int result = n - lost.length;
         List<Integer> lostList = Arrays.stream(lost).boxed().sorted().collect(Collectors.toList());
         List<Integer> reserveList = Arrays.stream(reserve).boxed().sorted().collect(Collectors.toList());
+        //여벌 체육복을 가져온 학생이 도난 당했을 경우
         for(int i = 0; i < lost.length; i++){
-            //여벌 체육복을 가져온 학생이 도난 당했을 경우
+        
             if(reserveList.contains(lost[i])){
                 reserveList.remove(Integer.valueOf(lost[i]));
                 lostList.remove(Integer.valueOf(lost[i]));
