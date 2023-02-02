@@ -4,7 +4,7 @@ class Solution {
         List<String> list1 = new ArrayList<>();
         List<String> list2 = new ArrayList<>();
         List<String> list3 = new ArrayList<>();
-        //graph1
+        //graph 1 10진수를 2진수로 변환
         for(int i = 0; i < n; i++){
             int start = arr1[i];
             String str = "";
@@ -19,7 +19,7 @@ class Solution {
             }
             list1.add(str);
         }
-        //graph2
+        //graph 2 10진수를 2진수로 변환
         for(int i = 0; i < n; i++){
             int start = arr2[i];
             String str = "";
@@ -41,7 +41,6 @@ class Solution {
             int[] chArr2 = Arrays.stream(list2.get(i).split("")).mapToInt(Integer::parseInt).toArray();
             for(int j = 0; j < n; j++){
                 chArr3[j] = chArr1[j] + chArr2[j];
-                System.out.println("chArr3 = " + chArr3[j]);
                 if(chArr3[j] > 0)
                     chArr3[j] = 1;
             }
