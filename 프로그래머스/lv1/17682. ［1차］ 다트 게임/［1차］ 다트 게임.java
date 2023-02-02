@@ -5,11 +5,11 @@ class Solution {
         char[] chArr = dartResult.toCharArray();
         int index = 0;
         for(int i = 0; i < chArr.length; i++){
+            //10인 경우 처리
             if ( (chArr[i] == '1') && (chArr[i+1] == '0')){
                 intArr[index++] = 10;
                 i++;
             }
-
             else if ((chArr[i] >= '0') && (chArr[i] <= '9'))
                 intArr[index++] = chArr[i] - '0';
             
